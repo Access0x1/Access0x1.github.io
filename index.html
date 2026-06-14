@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Access0x1 — get you and your business onchain</title>
+  <meta name="description" content="A do-it-all center to get you and your business onchain — non-custodial, USD-priced payments + commerce + identity. One drop-in, no contract code. Live + verified on Base Sepolia." />
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --panel: #111726;
+      --ink: #e8eef9;
+      --muted: #9fb0c9;
+      --accent: #5b8cff;
+      --green: #44cc11;
+      --border: #1e2940;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 72px 24px 96px; }
+    .eyebrow {
+      font: 600 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+    }
+    h1 { font-size: 40px; line-height: 1.1; margin: 14px 0 8px; letter-spacing: -.02em; }
+    .tagline { font-size: 19px; color: var(--ink); margin: 0 0 6px; }
+    .sub { color: var(--muted); margin: 0 0 28px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; }
+    .badge {
+      font: 600 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border);
+      background: var(--panel); color: var(--muted);
+    }
+    .badge.green { color: var(--green); border-color: #25431a; }
+    .badge.live { color: #cfe0ff; border-color: #28406e; }
+    .card {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
+      padding: 20px 22px; margin: 0 0 18px;
+    }
+    .card h2 { font-size: 14px; margin: 0 0 10px; color: var(--muted); font-weight: 600;
+      text-transform: uppercase; letter-spacing: .08em; }
+    code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; }
+    .addr { word-break: break-all; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    pre {
+      background: #0a0e16; border: 1px solid var(--border); border-radius: 10px;
+      padding: 14px 16px; overflow-x: auto; margin: 8px 0 0;
+    }
+    pre code { color: #cfe0ff; }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 8px 0 0; }
+    .btn {
+      display: inline-block; padding: 11px 18px; border-radius: 10px; font-weight: 600;
+      border: 1px solid var(--border); background: var(--panel); color: var(--ink);
+    }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #07101f; }
+    ul.flow { margin: 0; padding-left: 18px; color: var(--muted); }
+    ul.flow li { margin: 4px 0; }
+    .note { color: var(--muted); font-size: 14px; }
+    footer { margin-top: 36px; color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="eyebrow">Open source · Non-custodial · MIT</p>
+    <h1>Access0x1</h1>
+    <p class="tagline"><strong>A do-it-all center to get you and your business onchain.</strong></p>
+    <p class="sub">Non-custodial, USD-priced payments + commerce + identity. One drop-in, no contract code.</p>
+
+    <div class="badges">
+      <span class="badge live">Live + verified on Base Sepolia</span>
+      <span class="badge green">846 tests passing</span>
+      <span class="badge green">100% router coverage</span>
+      <span class="badge green">Slither: 0 exploitable</span>
+      <span class="badge">Custody: none</span>
+      <span class="badge">MIT</span>
+    </div>
+
+    <div class="card">
+      <h2>Live router · Base Sepolia</h2>
+      <p class="addr mono"><a href="https://base-sepolia.blockscout.com/address/0xec89c9eE28AF42Ae2b917BB0bAe245EAad6E8E57">0xec89c9eE28AF42Ae2b917BB0bAe245EAad6E8E57</a></p>
+      <p class="note">Verified on Blockscout. Testnet only — no mainnet deployments and no mainnet claims.</p>
+    </div>
+
+    <div class="card">
+      <h2>What it is</h2>
+      <p>One shared, multi-tenant router serves every merchant. A payment is priced USD-to-token <em>inside the settlement transaction</em> via a Chainlink feed, an exact fee is split atomically, and net value is pushed to the merchant — all in one tx. The contract never holds merchant funds.</p>
+      <ul class="flow">
+        <li>Payments — non-custodial, USD-priced, exact fee split, all in one tx</li>
+        <li>Commerce — subscriptions, bookings, invoices, gift cards, zero-custody NFT sales</li>
+        <li>Identity + agents — sign-once budget-scoped sessions; World ID / ENS / OIDC verified checkout</li>
+        <li>Your own token — non-custodial factory for a loyalty / credit / closed-loop token</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Owned ERCs</h2>
+      <p class="mono">ERC-6909 (multi-token receipts) · ERC-7702 (agent session delegation) · ERC-6492 (predeploy signatures)</p>
+    </div>
+
+    <div class="card">
+      <h2>Built with our sponsors</h2>
+      <p class="note">Dynamic (embedded wallets) · Circle + Arc (gas-free USDC — USDC is Arc's native gas token) · Chainlink (Data Feeds in-tx; CRE audit write simulated via a mock forwarder, live DON deploy Early-Access) · World ID (shipped, verified-human checkout) · ENS (verified merchant identity + gasless subnames) · Unlink (confidential payouts).</p>
+    </div>
+
+    <div class="card">
+      <h2>Get started</h2>
+      <pre><code>npx degit Access0x1/Access0x1/templates/starter my-checkout
+cd my-checkout
+npm run setup</code></pre>
+      <p class="note">The generated app and contracts are yours — nothing depends on Access0x1 infrastructure. An npm package link will be added here once published.</p>
+    </div>
+
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/Access0x1/Access0x1">View the repo</a>
+      <a class="btn" href="https://access0x1.nfteria.click">Live demo</a>
+      <a class="btn" href="https://base-sepolia.blockscout.com/address/0xec89c9eE28AF42Ae2b917BB0bAe245EAad6E8E57">Verified router</a>
+    </div>
+
+    <footer>
+      Built in public · MIT · Live + verified on Base Sepolia · testnet only, no mainnet deployments yet.
+    </footer>
+  </main>
+</body>
+</html>
