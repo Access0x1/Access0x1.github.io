@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Access0x1 — get you and your business onchain</title>
-  <meta name="description" content="A do-it-all center to get you and your business onchain — non-custodial, USD-priced payments + commerce + identity. One drop-in, no contract code. Live + verified on Base Sepolia and Arc Testnet." />
+  <title>Access0x1 — get any business onchain</title>
+  <meta name="description" content="Get any business — or its agent — onchain, in one drop-in. Open-source, non-custodial, USD-priced payments + commerce + identity. One CREATE3 address on 8 testnets." />
   <style>
     :root {
       --bg: #0b0f17;
       --panel: #111726;
       --ink: #e8eef9;
       --muted: #9fb0c9;
-      --accent: #5b8cff;
+      --accent: #22d3ee;
       --green: #44cc11;
       --border: #1e2940;
     }
@@ -38,7 +38,7 @@
       background: var(--panel); color: var(--muted);
     }
     .badge.green { color: var(--green); border-color: #25431a; }
-    .badge.live { color: #cfe0ff; border-color: #28406e; }
+    .badge.live { color: #a5f3fc; border-color: #164e63; }
     .card {
       background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
       padding: 20px 22px; margin: 0 0 18px;
@@ -70,44 +70,41 @@
   <main class="wrap">
     <p class="eyebrow">Open source · Non-custodial · MIT</p>
     <h1>Access0x1</h1>
-    <p class="tagline"><strong>A do-it-all center to get you and your business onchain.</strong></p>
-    <p class="sub">Non-custodial, USD-priced payments + commerce + identity. One drop-in, no contract code.</p>
+    <p class="tagline"><strong>Get any business — or its agent — onchain, in one drop-in.</strong></p>
+    <p class="sub">Non-custodial, USD-priced payments + commerce + identity. No contract code. Built to be cloned.</p>
 
     <div class="badges">
-      <span class="badge live">Live + verified on Base Sepolia &amp; Arc Testnet</span>
-      <span class="badge green">859 tests passing</span>
-      <span class="badge green">100% router coverage</span>
-      <span class="badge green">Slither: 0 exploitable</span>
+      <span class="badge live">One CREATE3 address · 8 testnets</span>
+      <span class="badge green">2,000+ Foundry tests — count CI-enforced on the repo</span>
       <span class="badge">Custody: none</span>
       <span class="badge">MIT</span>
     </div>
 
     <div class="card">
-      <h2>Live routers — multi-chain</h2>
-      <p><strong>Base Sepolia (84532)</strong><br/><span class="addr mono"><a href="https://base-sepolia.blockscout.com/address/0xec89c9eE28AF42Ae2b917BB0bAe245EAad6E8E57">0xec89c9eE28AF42Ae2b917BB0bAe245EAad6E8E57</a></span></p>
-      <p><strong>Arc Testnet (5042002)</strong><br/><span class="addr mono"><a href="https://testnet.arcscan.app/address/0xa5982ea8842eea97c6e313a5f75fd8cf72c69aad">0xA5982ea8842Eea97C6e313A5f75FD8CF72C69Aad</a></span></p>
-      <p class="note">Both verified on-chain. Testnet only — no mainnet deployments and no mainnet claims.</p>
+      <h2>The live rail — one address, everywhere</h2>
+      <p><strong>The CREATE3 mirror router</strong><br/><span class="addr mono"><a href="https://sepolia.etherscan.io/address/0xe92244e3368561faf21648146511DeDE3a475EB5">0xe92244e3368561faf21648146511DeDE3a475EB5</a></span></p>
+      <p class="note">The same address serves 8 testnets (7 source-verified) — with registered merchants and settled payments you can read on-chain. Testnet only; mainnet is a post-audit decision, not a claim.</p>
     </div>
 
     <div class="card">
       <h2>What it is</h2>
-      <p>One shared, multi-tenant router serves every merchant. A payment is priced USD-to-token <em>inside the settlement transaction</em> via a Chainlink feed, an exact fee is split atomically, and net value is pushed to the merchant — all in one tx. The contract never holds merchant funds.</p>
+      <p>One shared router serves every merchant. A payment is priced USD-to-token <em>inside the settlement transaction</em> via a Chainlink feed, an exact fee is split atomically (<span class="mono">net + fee == gross</span>, proven under fuzz), and net value lands at the merchant in the same tx. The contract never holds merchant funds.</p>
       <ul class="flow">
         <li>Payments — non-custodial, USD-priced, exact fee split, all in one tx</li>
         <li>Commerce — subscriptions, bookings, invoices, gift cards, zero-custody NFT sales</li>
-        <li>Identity + agents — sign-once budget-scoped sessions; World ID / ENS / OIDC verified checkout</li>
-        <li>Your own token — non-custodial factory for a loyalty / credit / closed-loop token</li>
+        <li>Identity — ENS names as payment surfaces, a ○ → ✓ → ✓✓ verification ladder, verified-human checkout</li>
+        <li>Agents — x402 nanopayments under hard budgets; the rail mints the agent's wallet and its name</li>
       </ul>
     </div>
 
     <div class="card">
-      <h2>Owned ERCs</h2>
-      <p class="mono">ERC-6909 (multi-token receipts) · ERC-7702 (agent session delegation) · ERC-6492 (predeploy signatures)</p>
+      <h2>Building with, this weekend — ETHGlobal Lisbon 2026</h2>
+      <p class="note"><strong>Uniswap</strong> — a real swap landed through the shipped rail during the event (<a href="https://sepolia.etherscan.io/tx/0x936acc13fd35032da86aa7075608131f3c39addb9198d7d5877e54ff51a24e69">fill == quote, to the wei</a>), and the <a href="https://sepolia.etherscan.io/address/0x4d6cf3e12c331393880df02b53017a478a6ec040">v4 receipt hook is live on Ethereum Sepolia</a> at a flag-mined address. <strong>ENS</strong> — the <a href="https://sepolia.etherscan.io/address/0x9c9ade797451309925ef400e99b289ee1ea1d237">payment resolver is live</a>: a name that answers with the merchant's current payout, read from the router at query time; the agent publishes its own inference choice in its records. <strong>0G</strong> — the docs assistant answers on 0G Compute, badge visible. <strong>World</strong> — an AgentKit admission gate in front of the paying agent.</p>
     </div>
 
     <div class="card">
-      <h2>Built with our sponsors</h2>
-      <p class="note">Dynamic (embedded wallets) · Circle + Arc (gas-free USDC — USDC is Arc's native gas token) · Chainlink (Data Feeds in-tx; CRE audit write simulated via a mock forwarder, live DON deploy Early-Access) · World ID (shipped, verified-human checkout) · ENS (verified merchant identity + gasless subnames) · Unlink (confidential payouts).</p>
+      <h2>In the stack either way</h2>
+      <p class="note">Dynamic · Chainlink · Circle (USDC, Arc, x402) · MetaMask · Walrus — not all of them sponsor every event we build at. We like them, we run on them regardless.</p>
     </div>
 
     <div class="card">
@@ -115,18 +112,17 @@
       <pre><code>npx degit Access0x1/Access0x1/templates/starter my-checkout
 cd my-checkout
 npm run setup</code></pre>
-      <p class="note">The generated app and contracts are yours — nothing depends on Access0x1 infrastructure. An npm package link will be added here once published.</p>
+      <p class="note">The generated app and contracts are yours — nothing depends on Access0x1 infrastructure.</p>
     </div>
 
     <div class="cta">
-      <a class="btn primary" href="https://github.com/Access0x1/Access0x1">View the repo</a>
-      <a class="btn" href="https://access0x1.nfteria.click">Live demo</a>
-      <a class="btn" href="https://base-sepolia.blockscout.com/address/0xec89c9eE28AF42Ae2b917BB0bAe245EAad6E8E57">Router · Base Sepolia</a>
-      <a class="btn" href="https://testnet.arcscan.app/address/0xa5982ea8842eea97c6e313a5f75fd8cf72c69aad">Router · Arc Testnet</a>
+      <a class="btn primary" href="https://access0x1.click">Live app</a>
+      <a class="btn" href="https://github.com/Access0x1/Access0x1">View the repo</a>
+      <a class="btn" href="https://sepolia.etherscan.io/address/0xe92244e3368561faf21648146511DeDE3a475EB5">The router, on-chain</a>
     </div>
 
     <footer>
-      Built in public · MIT · Live + verified on Base Sepolia &amp; Arc Testnet · testnet only, no mainnet deployments yet.
+      Built solo at ETHGlobal NY 2026 · extended live at ETHGlobal Lisbon 2026 · MIT · testnets only, every claim reproducible from the repo.
     </footer>
   </main>
 </body>
